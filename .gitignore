@@ -1,0 +1,12 @@
+.*
+!.gitignore
+_*
+*/*.log
+wandb
+
+data/
+artifacts/
+out/
+slurm*.*
+*.out
+Makefile

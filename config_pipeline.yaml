@@ -1,0 +1,23 @@
+steps:
+  preprocess_detectionds:
+  preprocess_ablationds:
+  writters_attitude:
+    models:
+    - model: SamLowe/roberta-base-go_emotions
+      name: emotion
+      max_len: 350
+    - model: cardiffnlp/twitter-roberta-base-irony
+      name: irony
+      max_len: 350
+    - model: jakub014/bert-base-uncased-IBM-argQ-30k-finetuned-convincingness-IBM
+      name: convincingness
+      max_len: 350
+      label_map: {'LABEL_0': 'convincing', 'LABEL_1': 'non_convincing'}
+    - model: paragon-analytics/roberta_persuade
+      name: persuasiveness
+      label_map: {'LABEL_0': 'non_persuasive', 'LABEL_1': 'persuasive'}
+      max_len: 350
+  dataset-analysis:
+  evaluate-detectors:
+    positive_label: 'LLM'
+  analysis-correlations:
