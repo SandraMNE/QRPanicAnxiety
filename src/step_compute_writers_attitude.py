@@ -1,5 +1,5 @@
 import os
-from os import path
+from os import path, makedirs
 import argparse
 import wandb
 import logging
@@ -34,8 +34,11 @@ def get_dataset(run, ds_version:str="latest", **kwargs):
 
 def main(log_wandb, localtest, t10sec, **kwargs):
     # TODO test and wrap in a cls and (join?) results and log them to a wandb artifact
-    tgt_dir = f"{BASE_DIR}/out"
+    tgt_dir = f"{BASE_DIR}/out"    
     logger.info(locals())
+
+    if not path.exists(tgt_dir):
+        makedirs(tgt_dir)
 
     tags=None
     if "artifact_name" in kwargs and "ablation" in kwargs.get("artifact_name"):
@@ -115,7 +118,7 @@ if __name__ == "__main__":
     parser.add_argument("--log_wandb", action="store_true", help="log to wandb")
     parser.add_argument("--localtest", action="store_true", help="ONLY use for local unit tests")
     parser.add_argument('--t10sec', type=bool, default=False, help="Sanity check (Unitest)")
-    parser.add_argument("--artifact_name", default="ds_detection", type=str, help="name of the dataset to compute")
+    parser.add_argument("--artifact_name", default="ds_paanx", type=str, help="name of the dataset to compute")
 
     args = parser.parse_args()
 

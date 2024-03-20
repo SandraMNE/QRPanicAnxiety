@@ -84,7 +84,7 @@ def main(file_or_dir, artifact_name:str, wandb_entity:str, wandb_project:str, lo
 
     # identify valid responses
     df = preprocess_identifyvalid(df)
-    tgt_path = path.join(tgt_dir_files, "paanx_preprocessed.tsv")
+    tgt_path = path.join(tgt_dir_files, f"{artifact_name}_preprocessed.tsv")
     df.to_csv(tgt_path, sep="\t")
 
     if log_wandb:

@@ -10,9 +10,9 @@ os.environ[WANDB_DIR]=WANDB_DIR
 
 # ============
 
-PROJECT_NAME='misinfodag_wp2'
+PROJECT_NAME='paanx'
 WANDB_ENTITY=env("WANDB_ENTITY", "idsia-nlp")
-WANDB_PROJECT=env("WANDB_PROJECT", "dag-mtsm-wp2")
+WANDB_PROJECT=env("WANDB_PROJECT", "paanx")
 CONFIG_PIPELINE=env("CONFIG_PIPELINE", os.path.join(BASE_DIR, "config_pipeline.yaml"))
 
 # ============
