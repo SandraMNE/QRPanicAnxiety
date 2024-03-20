@@ -1,3 +1,2 @@
 - Prepare for pipeline, use wandb artifact to load the dataset
 - script to generate analysis plots from writer attitudes
-- Notebooks for Dataset repurposing (Amazon review, CovidLies)

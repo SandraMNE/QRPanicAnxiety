@@ -64,7 +64,7 @@ if __name__ == "__main__":
     parser = ArgumentParser(conflict_handler='resolve') # add_help=False to be used in cluster
 
     parser.add_argument('--t10sec', type=bool, default=False, help="Sanity check (Unitest)")
-    parser.add_argument('--data_path', type=str, default="./data/20230808_092322_databricks-dolly_size-200_source.tsv", help="Dataset (as tsv)")
+    parser.add_argument('--data_path', type=str, default="./data/", help="Dataset (as tsv)")
     # parser.add_argument('--model', type=str, default="kinit/semeval2023-task3-persuasion-techniques")
     # parser.add_argument('--model', type=str, default="SamLowe/roberta-base-go_emotions")
     # parser.add_argument('--model', type=str, default="cardiffnlp/twitter-roberta-base-irony")

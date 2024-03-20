@@ -1,5 +1,4 @@
-"""Preprocess of Jopsephs detection files
-
+"""
 """
 import os
 import argparse
